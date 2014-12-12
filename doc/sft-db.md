@@ -25,7 +25,7 @@ acct_no || 账号
 acct_name || 账户名称
 id_type| | 证件类型
 id_no |  | 证件号码
-telephone | | 手机号
+phone | | 手机号
 
 bank_no    || 联行号
 bank_code  || 银行编号
@@ -41,34 +41,32 @@ chnl_code || 路由渠道
 status | | 流水状态: 0-插入, 1-已调度, 2-成功, 3-失败
 
 ## 路由组配置表 route_group
-id          || 路由组ID
-name        || 路由组名称
+id          ||
+name        || 路由组名称    工行-代收-保险    icbc-gather-insurance
 bank_code   || 银行编号
+tcode       ||
 btype       || 业务类型
 
 ## 路由组信息 route_group_map
-rg_id     || 路由组ID
+id        ||
+rg_name   || 路由组名称
 chnl_code || 渠道编号
 
 ## 银行渠道信息chnl_info
+id         ||
 chnl_code  || 渠道编码
 chnl_name  || 渠道名称
 chnl_tps   || 渠道处理能力, 每秒最多多少笔
 
 ## 渠道成本配置chnl_cost_cfg
-chnl_code   || 渠道代码
-tcode       || 渠道交易代码
-btype       || 渠道业务类型
-bank_code   || 银行代码
+rgm_id      || reference route_group_map
+floor       || 保底      int(分)
+ceiling     || 封顶      int(分)
+ratio       || 比例      int
+fix         || 固定      int(分)
 
-floor       || 保底
-ceiling    || 封顶
-ratio       || 比例
-fix         || 固定
-
-## 交易成本表日志sft_cost_log
+## 交易成本表日志sft_cost_dtl
 sft_key    || 平台key
-tcode      || 交易代码
 cost       || 交易成本, 单位(分)
 
 ## 业务类型btype_cfg
