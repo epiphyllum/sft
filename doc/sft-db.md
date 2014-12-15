@@ -54,8 +54,8 @@ chnl_code || 渠道编号
 
 ## 银行渠道信息chnl_info
 id         ||
-chnl_code  || 渠道编码
-chnl_name  || 渠道名称
+chnl_code  || 渠道编码    ccb.hn  ccb.gd  tlt   hyl  cups
+chnl_name  || 渠道名称    湖南工行  广东工行  通联通  银联代收付
 chnl_tps   || 渠道处理能力, 每秒最多多少笔
 
 ## 渠道成本配置chnl_cost_cfg
